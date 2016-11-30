@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/img_a"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#d2393939"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="-50dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/gradient_strip"
+            android:text="@string/order"
+            android:id="@+id/btn_order"
+            android:elevation="24dp"
+            android:contentDescription="Deliver New Order" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/gradient_strip"
+            android:textColor="@android:color/white"
+            android:text="@string/order_history"
+            android:id="@+id/btn_order_history"
+            android:elevation="24dp"
+            android:contentDescription="Check orders delivered" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="28dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/gradient_strip"
+            android:text="@string/points_collected"
+            android:id="@+id/btn_points_collected"
+            android:elevation="24dp"
+            android:contentDescription="See all points Earned" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="28dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/gradient_strip"
+            android:text="@string/my_details"
+            android:id="@+id/btn_my_details"
+            android:elevation="24dp"
+            android:contentDescription="Get Driver Details" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

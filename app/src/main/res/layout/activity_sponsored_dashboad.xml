@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/img_a"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#d2393939"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="-50dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/gradient_strip"
+            android:text="@string/new_orders"
+            android:id="@+id/btn_new_orders" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/gradient_strip"
+            android:textColor="@android:color/white"
+            android:text="@string/assigned_orders"
+            android:id="@+id/btn_assigned_orders" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/gradient_strip"
+            android:textColor="@android:color/white"
+            android:text="@string/delivered_orders"
+            android:id="@+id/btn_delivered_orders" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/gradient_strip"
+            android:textColor="@android:color/white"
+            android:text="@string/reverse_orders"
+            android:id="@+id/btn_reverse_orders" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/gradient_strip"
+            android:textColor="@android:color/white"
+            android:text="@string/pending_orders"
+            android:id="@+id/btn_pending_orders" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/gradient_strip"
+            android:textColor="@android:color/white"
+            android:text="@string/order_history"
+            android:id="@+id/btn_order_history" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

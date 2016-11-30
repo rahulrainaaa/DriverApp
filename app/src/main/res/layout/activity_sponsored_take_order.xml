@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark_grad">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="40dp"
+        android:paddingTop="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/customer_details"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/cust_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Victoria"
+                android:textColor="@android:color/white"
+                android:textDirection="ltr"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/cust_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Address Lines 1\nAddress Line 2"
+                android:textColor="@color/colorAccent"
+                android:textDirection="ltr" />
+
+            <TextView
+                android:id="@+id/cust_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Mobile: +0987654321"
+                android:textColor="@color/colorAccent"
+                android:textDirection="ltr" />
+
+            <TextView
+                android:id="@+id/cust_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email: customer@domain.ext"
+                android:textColor="@color/colorAccent"
+                android:textDirection="ltr"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_pick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/gradient_strip"
+            android:text="@string/pick"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gradient_strip"
+            android:text="@string/map"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</ScrollView>

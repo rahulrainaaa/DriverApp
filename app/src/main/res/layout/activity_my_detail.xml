@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark_grad"
+    tools:context=".activity.freelance.FreelanceDetailsActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingTop="40dp"
+        android:paddingBottom="30dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/my_details"
+            android:textColor="@color/colorPrimary"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:id="@+id/img_icard"
+            android:background="@drawable/shape_rect_outline"
+            android:scaleType="fitXY"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/profileimage"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:id="@+id/textView8"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name "
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:id="@+id/my_details_name"
+                android:textColor="@color/colorWhite"
+                android:layout_toEndOf="@+id/textView6"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/my_details_address" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/textView6"
+                android:paddingTop="20dp"
+                android:layout_below="@+id/textView8"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address Line 1\n Address Line 2\n Address Line 3\n State / City\n Country, postal code"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:gravity="left"
+                android:paddingRight="10dp"
+                android:id="@+id/my_details_address"
+                android:textColor="@color/colorWhite"
+                android:layout_alignTop="@+id/textView6"
+                android:layout_alignEnd="@+id/my_details_gender"
+                android:layout_toEndOf="@+id/textView10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:paddingTop="20dp"
+                android:id="@+id/textView9"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/my_details_address"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Gender "
+                android:gravity="left"
+                android:paddingTop="20dp"
+                android:id="@+id/my_details_gender"
+                android:textColor="@color/colorWhite"
+                android:layout_above="@+id/my_details_mobile"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/textView10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mobile_number"
+                android:id="@+id/textView10"
+                android:paddingTop="20dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/textView9"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number "
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp"
+                android:id="@+id/my_details_mobile"
+                android:textColor="@color/colorWhite"
+                android:layout_alignTop="@+id/textView10"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/textView10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:id="@+id/textView11"
+                android:paddingTop="20dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/textView10"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="E-mail "
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp"
+                android:id="@+id/my_details_email"
+                android:textColor="@color/colorWhite"
+                android:layout_above="@+id/my_details_dob"
+                android:layout_toEndOf="@+id/textView10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_of_birth"
+                android:id="@+id/textView12"
+                android:paddingTop="20dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/textView11"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="left"
+                android:paddingTop="20dp"
+                android:id="@+id/my_details_dob"
+                android:textColor="@color/colorWhite"
+                android:layout_alignTop="@+id/textView12"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/my_details_email" />
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

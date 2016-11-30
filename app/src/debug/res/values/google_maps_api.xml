@@ -1,0 +1,20 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=DF:F9:BE:24:5F:4A:FD:F7:69:80:3D:DB:12:EF:28:D4:66:54:66:64%3Bcom.lugmity.driverapp.activity
+
+    You can also add your credentials to an existing key, using this line:
+    DF:F9:BE:24:5F:4A:FD:F7:69:80:3D:DB:12:EF:28:D4:66:54:66:64;com.lugmity.driverapp.activity
+    87:33:D3:B0:AA:7D:73:0F:81:ED:7C:7F:F0:58:E3:16:7A:C8:E4:9B;com.lugmity.driverapp.activity
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDgvcFVX24r_wNkGwIaSu5QnyDxG_Tr5Pk</string>
+</resources>

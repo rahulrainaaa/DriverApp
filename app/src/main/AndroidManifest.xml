@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lugmity.driverapp">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:name=".application.LugemityApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.driver.SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.driver.LoginActivity"
+            android:label="@string/login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.freelance.FreelanceDashbordActivity"
+            android:label="@string/freelance_driver"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.driver.ChangePasswordActivity"
+            android:label="@string/change_password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.freelance.FreelanceOrderAcceptActivity"
+            android:label="@string/order_detail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.freelance.FreelanceRegisterActivity"
+            android:label="@string/register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.sponsored.SponsoredTripHistoryActivity"
+            android:label="@string/trip_history"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.freelance.FreelancePointsActivity"
+            android:label="@string/points"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.sponsored.SponsoredDashboardActivity"
+            android:label="@string/sponsored_driver"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.freelance.FreelanceHistoryActivity"
+            android:label="@string/freelance_history"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.sponsored.SponsoredHistoryActivity"
+            android:label="@string/sponsored_history"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.freelance.FreelanceViewOrderListActivity"
+            android:label="@string/order_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.freelance.FreelanceDetailsActivity"
+            android:label="@string/my_details"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activity.driver.Current2RestMapActivity"
+            android:label="@string/title_activity_restaurant_map"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.driver.Current2Rest2CustMapActivity"
+            android:label="@string/full_route"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.freelance.FreelanceRestaurantListMapActivity"
+            android:label="@string/title_activity_restaurant_list_map"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.freelance.FreelanceOrderHistoryDetail"
+            android:label="@string/title_activity_freelance_order_history_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.freelance.FreelanceNav2Restaurant"
+            android:label="@string/title_activity_freelance_nav2_restaurant"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.driver.Current2CustMapActivity"
+            android:label="@string/customer_map"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.freelance.FreelanceNav2Customer"
+            android:label="@string/title_activity_freelance_nav2_customer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.freelance.FreelancerPickupActivity"
+            android:label="@string/order_pickup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.freelance.FreelanceDeliverActivity"
+            android:label="@string/order_deliver"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.sponsored.SponsoredOpenOrderListActivity"
+            android:label="@string/new_orders"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.sponsored.SponsoredTakeOrderActivity"
+            android:label="@string/pick_order"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.driver.GivenPositionMapActivity"
+            android:label="@string/customer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.sponsored.SponsoredAssignedListActivity"
+            android:label="@string/orders_assigned"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.sponsored.SponsoredPendingListActivity"
+            android:label="@string/orders_pending"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.sponsored.SponsoredDeliveredListActivity"
+            android:label="@string/orders_delivered"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.sponsored.SponsoredReverseListActivity"
+            android:label="@string/orders_reversed"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.driver.ShowCoordinateMapActivity"
+            android:label="@string/title_activity_show_coordinate_map"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

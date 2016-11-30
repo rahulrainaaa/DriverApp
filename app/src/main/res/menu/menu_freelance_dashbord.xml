@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_home"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/home" />
+
+    <item android:id="@+id/action_order_history"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/order_history" />
+
+    <item android:id="@+id/action_points_collected"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/points_collected" />
+
+    <item android:id="@+id/action_my_details"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/my_details" />
+
+    <item android:id="@+id/action_change_password"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/change_password" />
+
+    <item android:id="@+id/action_logout"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/logout" />
+
+</menu>

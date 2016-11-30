@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark_grad">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="25dp"
+            android:paddingLeft="25dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/restaurant_details"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_marginTop="7dp"
+                android:id="@+id/rest_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="XYZ Restaurant &amp; Hotels"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rest_add"
+                android:layout_marginTop="5dp"
+                android:text="Address Lines 1\nAddress Line 2"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rest_mob"
+                android:layout_marginTop="4dp"
+                android:text="Contact No: +0987654321"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rest_email"
+                android:text="Email: restaurant@domain.ext"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/customer_details"
+                android:textSize="20dp"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_marginTop="7dp"
+                android:id="@+id/order_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Order 2234923749847"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/cust_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Victoria"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cust_add"
+                android:layout_marginTop="5dp"
+                android:text="Address Lines 1\nAddress Line 2"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cust_mobile"
+                android:layout_marginTop="4dp"
+                android:text="Mobile: +0987654321"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cust_email"
+                android:text="Email: customer@domain.ext"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"/>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_confirm"
+            android:text="@string/confirm"
+            android:layout_marginTop="70dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/gradient_strip" />
+    </LinearLayout>
+
+</ScrollView>

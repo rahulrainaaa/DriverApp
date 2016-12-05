@@ -70,17 +70,52 @@ public class FreelanceOrderAcceptActivity extends AppCompatActivity implements V
             @Override
             public void onClick(View v) {
 
-                HTTPTask httpTask = new HTTPTask();
-                String hitURL = "" + Network.LURL_ACCEPT_ORDER + Constants.order.orderId + "?" + Network.L_TOKEN_KEY;
-                httpTask.setData(FreelanceOrderAcceptActivity.this, FreelanceOrderAcceptActivity.this, "POST", hitURL, "{}", 1);
-                httpTask.execute("");
+                try {
+                    Restaurant restaurant = Constants.restaurant;
+                    Order order = Constants.order;
+                    JSONObject json = new JSONObject();
+                    json.put("from", restaurant.google.trim());
+                    json.put("to", order.google.trim());
+                    HTTPTask httpTask = new HTTPTask();
+                    httpTask.setData(FreelanceOrderAcceptActivity.this, FreelanceOrderAcceptActivity.this, "POST", Network.URL_PRICING_GEO, json.toString(), 0);
+                    httpTask.execute("");
+                } catch (JSONException jsonE) {
+                    Toast.makeText(FreelanceOrderAcceptActivity.this, "Exception while packing JSON Request", Toast.LENGTH_SHORT).show();
+                }
             }
         }).show();
     }
 
     @Override
     public void onSuccess(int statusCode, String statusMessage, String data, int code) {
-        if (code == 1) {
+        if (code == 0) {
+            try {
+                JSONObject json = new JSONObject(data.trim());
+                int sCode = json.getInt("statusCode");
+                String sMsg = json.getString("statusMessage");
+                if (sCode == 200) {
+                    //parse here the distance parameters.
+                    JSONObject jsonRequest = new JSONObject();
+                    JSONObject jsonData = json.getJSONObject("data");
+                    double price = jsonData.getDouble("Price");
+                    String currency = jsonData.getString("Currency");
+                    int time = jsonData.getInt("Time");
+                    int points = jsonData.getInt("Points");
+                    double distance = jsonData.getDouble("Distance");
+                    HTTPTask httpTask = new HTTPTask();
+                    String hitURL = "" + Network.LURL_ACCEPT_ORDER + Constants.order.orderId + "?" + Network.L_TOKEN_KEY;
+                    httpTask.setData(FreelanceOrderAcceptActivity.this, FreelanceOrderAcceptActivity.this, "POST", hitURL, "{}", 1);
+                    httpTask.execute("");
+                } else if (sCode == 204) {
+                    AlertDialogUtil.showAlertDialog(this, getResources().getString(R.string.no_route), getResources().getString(R.string.no_route_to_restaurant));
+                } else {
+                    AlertDialogUtil.showErrorDialog(this, getResources().getString(R.string.alert), "" + sCode + "." + sMsg);
+                }
+
+            } catch (JSONException jsonE) {
+                Toast.makeText(this, "" + jsonE.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        } else if (code == 1) {
             try {
                 JSONObject resp = new JSONObject(data.trim());
                 int sCode = resp.getInt("statusCode");

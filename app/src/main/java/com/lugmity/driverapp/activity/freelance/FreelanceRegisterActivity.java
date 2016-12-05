@@ -58,7 +58,7 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
     private ArrayList<String> list = null;
     private DatePickerDialog datePickerDialog = null;
     private String strGender = "";
-    private String strImage = "";
+    //private String strImage = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,31 +148,31 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
         }
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        switch (requestCode) {
-            case 1:
-                if (resultCode == RESULT_OK) {
-                    Uri selectedImageUri = data.getData();
-                    strImage = getPath(selectedImageUri);
-                    File file = new File(strImage);
-                    int file_size = Integer.parseInt(String.valueOf(file.length() / (1024)));
-                    Log.d("Image Size", "Uploaded image file size = " + file_size + "KB");
-                    if (file_size > 1200) {
-                        Toast.makeText(this, getResources().getString(R.string.image_file_kb), Toast.LENGTH_SHORT).show();
-                        selectedImageUri = null;
-                        file = null;
-                        file_size = 0;
-                        strImage = "";
-                        return;
-                    }
-                    Bitmap bmp = BitmapFactory.decodeFile(strImage.trim());
-                    imgIDCard.setImageBitmap(bmp);
-                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.image_attached), Toast.LENGTH_SHORT).show();
-                }
-                break;
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        switch (requestCode) {
+//            case 1:
+//                if (resultCode == RESULT_OK) {
+//                    Uri selectedImageUri = data.getData();
+//                    strImage = getPath(selectedImageUri);
+//                    File file = new File(strImage);
+//                    int file_size = Integer.parseInt(String.valueOf(file.length() / (1024)));
+//                    Log.d("Image Size", "Uploaded image file size = " + file_size + "KB");
+//                    if (file_size > 1200) {
+//                        Toast.makeText(this, getResources().getString(R.string.image_file_kb), Toast.LENGTH_SHORT).show();
+//                        selectedImageUri = null;
+//                        file = null;
+//                        file_size = 0;
+//                        strImage = "";
+//                        return;
+//                    }
+//                    Bitmap bmp = BitmapFactory.decodeFile(strImage.trim());
+//                    imgIDCard.setImageBitmap(bmp);
+//                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.image_attached), Toast.LENGTH_SHORT).show();
+//                }
+//                break;
+//        }
+//    }
 
     /**
      * @method pickFile
@@ -299,31 +299,31 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
             etEmail.setError(getResources().getString(R.string.enter_valid_data));
         }
         //check image
-        if (strImage.trim().isEmpty() && (flgValid == 0)) {
-            //flgValid = 11;
-            Snackbar.make(view, getResources().getString(R.string.id_proof_image_required), Snackbar.LENGTH_LONG).setAction(getResources().getString(R.string.add_q), new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    pickFile();
-                    //Toast.makeText(getApplicationContext(), "Upload under development.", Toast.LENGTH_SHORT).show();
-                }
-            }).show();
-            flgValid = 11;
-        }
-        //Check if any validation error then return null.
-        if (flgValid != 0) {
-            return null;
-        }
+//        if (strImage.trim().isEmpty() && (flgValid == 0)) {
+//            //flgValid = 11;
+//            Snackbar.make(view, getResources().getString(R.string.id_proof_image_required), Snackbar.LENGTH_LONG).setAction(getResources().getString(R.string.add_q), new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    pickFile();
+//                    //Toast.makeText(getApplicationContext(), "Upload under development.", Toast.LENGTH_SHORT).show();
+//                }
+//            }).show();
+//            flgValid = 11;
+//        }
+//        //Check if any validation error then return null.
+//        if (flgValid != 0) {
+//            return null;
+//        }
 
         //Prepare the request
         JSONObject json = new JSONObject();
         try {
-            File file = new File(strImage.trim());
-            FileInputStream fin = new FileInputStream(file);
-            byte[] bFile = new byte[(int) file.length()];
-            fin.read(bFile);
-            String encodedImage = new String(Base64.encode(bFile, Base64.DEFAULT));
-            fin.close();
+//            File file = new File(strImage.trim());
+//            FileInputStream fin = new FileInputStream(file);
+//            byte[] bFile = new byte[(int) file.length()];
+//            fin.read(bFile);
+//            String encodedImage = new String(Base64.encode(bFile, Base64.DEFAULT));
+//            fin.close();
             json.put("pass_key", Network.AUTH_REGISTER);
             json.put("fname", strName);
             json.put("fgender", strGender);
@@ -337,16 +337,16 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
             json.put("username", strUserName);
             json.put("password", strPassword);
             json.put("usertype", "freelance");
-            json.put("profilepic", encodedImage.toString());
+            json.put("profilepic", "");
         } catch (JSONException jsonE) {
             json = null;
             Toast.makeText(getApplicationContext(), "JSONException while request packing", Toast.LENGTH_SHORT).show();
             return null;
-        } catch (IOException ioE) {
+        } /*catch (IOException ioE) {
             json = null;
             Toast.makeText(getApplicationContext(), "IOException: File Handling Error", Toast.LENGTH_SHORT).show();
             return null;
-        } catch (Exception e) {
+        }*/ catch (Exception e) {
             json = null;
             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
             return null;

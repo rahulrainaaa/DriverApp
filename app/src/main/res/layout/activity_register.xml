@@ -283,6 +283,7 @@
             android:layout_marginTop="50dp"
             android:background="@drawable/gradient_strip"
             android:text="@string/upload_id"
+            android:visibility="gone"
             android:textColor="@android:color/white" />
 
         <ImageView
@@ -294,6 +295,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="50dp"
             android:background="@mipmap/profileimage"
+            android:visibility="gone"
             android:scaleType="fitXY" />
 
         <Button

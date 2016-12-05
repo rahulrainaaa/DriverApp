@@ -46,16 +46,16 @@ public class FreelanceDetailsActivity extends AppCompatActivity implements HTTPC
         txtEmail.setText(Constants.freelanceUserData.respFEmail);
         txtDob.setText(Constants.freelanceUserData.respFDob);
 
-        try {
-            JSONObject json = new JSONObject();
-            json.put("fid", "" + Constants.freelanceUserData.respFId);
-            HTTPTask httpGetImage = new HTTPTask();
-            httpGetImage.setData(this, this, "POST", Network.URL_GET_IMG, json.toString(), 1);
-            httpGetImage.execute("");
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(this, "Error while packing getImage request", Toast.LENGTH_SHORT).show();
-        }
+//        try {
+//            JSONObject json = new JSONObject();
+//            json.put("fid", "" + Constants.freelanceUserData.respFId);
+//            HTTPTask httpGetImage = new HTTPTask();
+//            httpGetImage.setData(this, this, "POST", Network.URL_GET_IMG, json.toString(), 1);
+//            httpGetImage.execute("");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            Toast.makeText(this, "Error while packing getImage request", Toast.LENGTH_SHORT).show();
+//        }
     }
 
     @Override

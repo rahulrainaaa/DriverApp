@@ -152,6 +152,7 @@
             android:name=".activity.driver.ShowCoordinateMapActivity"
             android:label="@string/title_activity_show_coordinate_map"
             android:screenOrientation="portrait" />
+        <activity android:name=".activity.freelance.TermsActivity"></activity>
     </application>
 
 </manifest>

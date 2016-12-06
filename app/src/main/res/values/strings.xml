@@ -16,6 +16,7 @@
     <string name="ok">OK</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
+    <string name="tnc">Terms and Condition</string>
     <string name="invalid_credentials">Invalid Credentials</string>
     <string name="user_inactive">User Inactive</string>
     <string name="as_freelancer">as Freelancer</string>

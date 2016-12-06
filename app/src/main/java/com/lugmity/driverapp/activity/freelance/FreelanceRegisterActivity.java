@@ -50,7 +50,7 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
 
     private EditText etUserName, etPassword, etCnfPassword, etName, etMobile,  etEmail, etAddress, etIdNo;
     //private EditText etMobileCode;
-    private TextView txtDob;
+    private TextView txtDob, txtTnc;
     private Spinner spGender;
     private Button btnUploadId, btnRegister;
     private ImageView imgIDCard;
@@ -70,6 +70,7 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
         etCnfPassword = (EditText) findViewById(R.id.et_cnf_password);
         etName = (EditText) findViewById(R.id.et_name);
         etMobile = (EditText) findViewById(R.id.et_mobile);
+        txtTnc = (TextView)findViewById(R.id.txttnc);
         //etMobileCode = (EditText) findViewById(R.id.et_mobile_code);
         etEmail = (EditText) findViewById(R.id.et_email);
         txtDob = (TextView) findViewById(R.id.txt_dob);
@@ -116,6 +117,7 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
         txtDob.setOnClickListener(this);
         btnRegister.setOnClickListener(this);
         btnUploadId.setOnClickListener(this);
+        txtTnc.setOnClickListener(this);
     }
 
     @Override
@@ -144,6 +146,10 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
                     httpTask.setData(this, this, "POST", Network.URL_REGISTER, json.toString(), 1);
                     httpTask.execute("");
                 }
+                break;
+            case R.id.txttnc:
+
+                startActivity(new Intent(this, TermsActivity.class));
                 break;
         }
     }

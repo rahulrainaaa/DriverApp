@@ -10,11 +10,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.lugmity.driverapp.R;
 import com.lugmity.driverapp.activity.freelance.FreelanceDashbordActivity;
 import com.lugmity.driverapp.activity.freelance.FreelanceRegisterActivity;
+import com.lugmity.driverapp.activity.freelance.TermsActivity;
 import com.lugmity.driverapp.activity.sponsored.SponsoredDashboardActivity;
 import com.lugmity.driverapp.adapter.LanguageAdapter;
 import com.lugmity.driverapp.constants.Constants;
@@ -37,6 +39,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
 
     private EditText etUserName = null;
     private EditText etPassword = null;
+    private TextView txtTnc = null;
     private Button btnLogin = null;
     private Spinner spLang = null;
     private LanguageAdapter adapter = null;
@@ -53,6 +56,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         btnLogin = (Button) findViewById(R.id.btn_login);
         spLang = (Spinner) findViewById(R.id.sp_language);
         radioGroup = (RadioGroup) findViewById(R.id.rg_lang);
+        txtTnc = (TextView)findViewById(R.id.txttnc);
         list = new ArrayList<String>();
         String strArabic = getResources().getString(R.string.arabic);
         String strEnglish = getResources().getString(R.string.english);
@@ -67,6 +71,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         spLang.setAdapter(adapter);
         spLang.setOnItemSelectedListener(this);
         btnLogin.setOnClickListener(this);
+        txtTnc.setOnClickListener(this);
         Constants.strUserType = "freelance";
         radioGroup.setOnCheckedChangeListener(this);
         CacheHandler.getInstance().clearCache(this);
@@ -118,42 +123,55 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
      **/
     @Override
     public void onClick(View view) {
-        String strUserName = etUserName.getText().toString().trim();
-        String strPassword = etPassword.getText().toString().trim();
 
-        //check for input field validations.
-        boolean chkUser = Constants.patternUsernamePassword.matcher("" + strUserName).matches();
-        boolean chkPass = Constants.patternUsernamePassword.matcher("" + strPassword).matches();
-        if (strUserName.isEmpty()) {
-            etUserName.setError(getResources().getString(R.string.cannot_be_empty));
-            etPassword.setError(null);
-            return;
-        } else if (!chkUser) {
-            etUserName.setError(getResources().getString(R.string.enter_valid_data));
-            etPassword.setError(null);
-            return;
-        } else if (strPassword.isEmpty()) {
-            etUserName.setError(null);
-            etPassword.setError(getResources().getString(R.string.cannot_be_empty));
-            return;
-        } else if (!chkPass) {
-            etPassword.setError(getResources().getString(R.string.enter_valid_data));
-            etUserName.setError(null);
-            return;
+        switch (view.getId())
+        {
+            case R.id.txttnc:
+
+                startActivity(new Intent(this, TermsActivity.class));
+                break;
+
+            default:
+
+                String strUserName = etUserName.getText().toString().trim();
+                String strPassword = etPassword.getText().toString().trim();
+
+                //check for input field validations.
+                boolean chkUser = Constants.patternUsernamePassword.matcher("" + strUserName).matches();
+                boolean chkPass = Constants.patternUsernamePassword.matcher("" + strPassword).matches();
+                if (strUserName.isEmpty()) {
+                    etUserName.setError(getResources().getString(R.string.cannot_be_empty));
+                    etPassword.setError(null);
+                    return;
+                } else if (!chkUser) {
+                    etUserName.setError(getResources().getString(R.string.enter_valid_data));
+                    etPassword.setError(null);
+                    return;
+                } else if (strPassword.isEmpty()) {
+                    etUserName.setError(null);
+                    etPassword.setError(getResources().getString(R.string.cannot_be_empty));
+                    return;
+                } else if (!chkPass) {
+                    etPassword.setError(getResources().getString(R.string.enter_valid_data));
+                    etUserName.setError(null);
+                    return;
+                }
+
+                JSONObject json = new JSONObject();
+                try {
+                    json.put("lusername", strUserName);
+                    json.put("lpassword", strPassword);
+                    json.put("lusertype", Constants.strUserType);
+                    json.put("lpass_key", Network.AUTH_LOGIN);
+                } catch (JSONException jsonE) {
+                    Toast.makeText(this, "JSON request packing error", Toast.LENGTH_SHORT).show();
+                }
+                HTTPTask httpTask = new HTTPTask();
+                httpTask.setData(this, this, "POST", Network.URL_LOGIN, json.toString(), 1);
+                httpTask.execute("");
+                break;
         }
 
-        JSONObject json = new JSONObject();
-        try {
-            json.put("lusername", strUserName);
-            json.put("lpassword", strPassword);
-            json.put("lusertype", Constants.strUserType);
-            json.put("lpass_key", Network.AUTH_LOGIN);
-        } catch (JSONException jsonE) {
-            Toast.makeText(this, "JSON request packing error", Toast.LENGTH_SHORT).show();
-        }
-        HTTPTask httpTask = new HTTPTask();
-        httpTask.setData(this, this, "POST", Network.URL_LOGIN, json.toString(), 1);
-        httpTask.execute("");
     }
 
     /**

@@ -6,15 +6,10 @@ import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Base64;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -37,9 +32,6 @@ import com.lugmity.driverapp.utils.PermissionCheck;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -48,7 +40,7 @@ import java.util.Calendar;
  */
 public class FreelanceRegisterActivity extends AppCompatActivity implements View.OnClickListener, HTTPCallback {
 
-    private EditText etUserName, etPassword, etCnfPassword, etName, etMobile,  etEmail, etAddress, etIdNo;
+    private EditText etUserName, etPassword, etCnfPassword, etName, etMobile, etEmail, etAddress, etIdNo;
     //private EditText etMobileCode;
     private TextView txtDob, txtTnc;
     private Spinner spGender;
@@ -70,7 +62,7 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
         etCnfPassword = (EditText) findViewById(R.id.et_cnf_password);
         etName = (EditText) findViewById(R.id.et_name);
         etMobile = (EditText) findViewById(R.id.et_mobile);
-        txtTnc = (TextView)findViewById(R.id.txttnc);
+        txtTnc = (TextView) findViewById(R.id.txttnc);
         //etMobileCode = (EditText) findViewById(R.id.et_mobile_code);
         etEmail = (EditText) findViewById(R.id.et_email);
         txtDob = (TextView) findViewById(R.id.txt_dob);
@@ -90,10 +82,7 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
             // when dialog box is closed, below method will be called.
             public void onDateSet(DatePicker view, int selectedYear,
                                   int selectedMonth, int selectedDay) {
-
-                // set selected date into textview
-                txtDob.setText(new StringBuilder().append(selectedDay).append("-")
-                        .append(DateUtils.getMonthName(selectedMonth)).append("-").append(selectedYear));
+                txtDob.setText(new StringBuilder().append(selectedDay).append("-").append(DateUtils.getMonthName(selectedMonth)).append("-").append(selectedYear));
 
             }
         }, 1995, 1, 1);
@@ -277,8 +266,7 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
         } else if (!Constants.patternMobile.matcher("" + strMobile).matches()) {
             flgValid = 7;
             etMobile.setError(getResources().getString(R.string.enter_valid_data));
-        }
-        else if(strMobile.length()!=10) {
+        } else if (strMobile.length() != 10) {
             flgValid = 7;
             etMobile.setError(getResources().getString(R.string.minimum_ten));
         }
@@ -317,9 +305,9 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
 //            flgValid = 11;
 //        }
 //        //Check if any validation error then return null.
-//        if (flgValid != 0) {
-//            return null;
-//        }
+        if (flgValid != 0) {
+            return null;
+        }
 
         //Prepare the request
         JSONObject json = new JSONObject();
@@ -413,32 +401,29 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
         Toast.makeText(FreelanceRegisterActivity.this, statusMessage, Toast.LENGTH_SHORT).show();
     }
 
-            public static class DatePickerDialogTheme extends DialogFragment implements DatePickerDialog.OnDateSetListener{
+    public static class DatePickerDialogTheme extends DialogFragment implements DatePickerDialog.OnDateSetListener {
 
-             @Override
-             public Dialog onCreateDialog(Bundle savedInstanceState){
-             final Calendar calendar = Calendar.getInstance();
-             int year = calendar.get(Calendar.YEAR);
-             int month = calendar.get(Calendar.MONTH);
-             int day = calendar.get(Calendar.DAY_OF_MONTH);
-
-
-
-         DatePickerDialog datepickerdialog = new DatePickerDialog(getActivity(),
-             AlertDialog.THEME_HOLO_LIGHT,this,1995,1,1);
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            final Calendar calendar = Calendar.getInstance();
+            int year = calendar.get(Calendar.YEAR);
+            int month = calendar.get(Calendar.MONTH);
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
 
 
+            DatePickerDialog datepickerdialog = new DatePickerDialog(getActivity(),
+                    AlertDialog.THEME_HOLO_LIGHT, this, 1995, 1, 1);
 
 
-             return datepickerdialog;
-             }
+            return datepickerdialog;
+        }
 
-             public void onDateSet(DatePicker view, int year, int month, int day){
+        public void onDateSet(DatePicker view, int year, int month, int day) {
 
-             TextView textview = (TextView)getActivity().findViewById(R.id.txt_dob);
+            TextView textview = (TextView) getActivity().findViewById(R.id.txt_dob);
 
-                 textview.setText(day + "-" + (DateUtils.getMonthName(month)) + "-" + year);
+            textview.setText(day + "-" + (DateUtils.getMonthName(month)) + "-" + year);
 
-             }
-             }
+        }
+    }
 }

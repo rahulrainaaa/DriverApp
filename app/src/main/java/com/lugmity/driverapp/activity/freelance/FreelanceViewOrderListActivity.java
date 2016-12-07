@@ -117,6 +117,8 @@ public class FreelanceViewOrderListActivity extends AppCompatActivity implements
                     order.google = jsonOrder.getString("geo");
                     order.name = jsonOrder.getString("custname");
                     order.address = jsonOrder.getString("address");
+                    order.pickupTime = jsonOrder.getString("pickup_time");
+
                     list.add(order);
                 }
                 adapter.notifyDataSetChanged();

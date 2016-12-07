@@ -20,6 +20,7 @@ public class Order {
     public String email = null;
     public String mobile = null;
     public String address = null;
+    public String pickupTime = null;
     public String status = null;
     public String currency = null;
     public String modified = null;

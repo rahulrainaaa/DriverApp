@@ -169,4 +169,5 @@
     <string name="image_decode_exception">صورة فك استثناء</string>
     <string name="minimum_ten">عدد عشرة أرقام</string>
     <string name="tnc">أحكام وشروط</string>
+    <string name="pickup_time">اختار المعاد</string>
 </resources>

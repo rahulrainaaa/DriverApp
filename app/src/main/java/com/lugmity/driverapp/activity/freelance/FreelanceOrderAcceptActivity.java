@@ -16,6 +16,7 @@ import com.lugmity.driverapp.model.Order;
 import com.lugmity.driverapp.model.Restaurant;
 import com.lugmity.driverapp.network.HTTPTask;
 import com.lugmity.driverapp.network.Network;
+import com.lugmity.driverapp.utils.ActivityUtils;
 import com.lugmity.driverapp.utils.AlertDialogUtil;
 
 import org.json.JSONException;
@@ -62,6 +63,7 @@ public class FreelanceOrderAcceptActivity extends AppCompatActivity implements V
 
         btnConfirm = (Button) findViewById(R.id.btn_confirm);
         btnConfirm.setOnClickListener(this);
+        cMobile.setOnClickListener(this);
 
         if (order.pickupTime != null) {
             AlertDialogUtil.showAlertDialog(this, getResources().getString(R.string.pickup_time), order.pickupTime);
@@ -71,24 +73,37 @@ public class FreelanceOrderAcceptActivity extends AppCompatActivity implements V
 
     @Override
     public void onClick(View view) {
-        Snackbar.make(view, getResources().getString(R.string.are_you_sure_q), Snackbar.LENGTH_LONG).setAction(getResources().getString(R.string.accept_q), new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                try {
-                    Restaurant restaurant = Constants.restaurant;
-                    Order order = Constants.order;
-                    JSONObject json = new JSONObject();
-                    json.put("from", restaurant.google.trim());
-                    json.put("to", order.google.trim());
-                    HTTPTask httpTask = new HTTPTask();
-                    httpTask.setData(FreelanceOrderAcceptActivity.this, FreelanceOrderAcceptActivity.this, "POST", Network.URL_PRICING_GEO, json.toString(), 0);
-                    httpTask.execute("");
-                } catch (JSONException jsonE) {
-                    Toast.makeText(FreelanceOrderAcceptActivity.this, "Exception while packing JSON Request", Toast.LENGTH_SHORT).show();
+        switch (view.getId()) {
+            case R.id.cust_mobile:
+                if (Constants.order.mobile.trim() == null) {
+                    return;
                 }
-            }
-        }).show();
+                ActivityUtils.startDialer(this, Constants.order.mobile.trim());
+                break;
+
+            default:
+                Snackbar.make(view, getResources().getString(R.string.are_you_sure_q), Snackbar.LENGTH_LONG).setAction(getResources().getString(R.string.accept_q), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        try {
+                            Restaurant restaurant = Constants.restaurant;
+                            Order order = Constants.order;
+                            JSONObject json = new JSONObject();
+                            json.put("from", restaurant.google.trim());
+                            json.put("to", order.google.trim());
+                            HTTPTask httpTask = new HTTPTask();
+                            httpTask.setData(FreelanceOrderAcceptActivity.this, FreelanceOrderAcceptActivity.this, "POST", Network.URL_PRICING_GEO, json.toString(), 0);
+                            httpTask.execute("");
+                        } catch (JSONException jsonE) {
+                            Toast.makeText(FreelanceOrderAcceptActivity.this, "Exception while packing JSON Request", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }).show();
+                break;
+        }
+
     }
 
     @Override

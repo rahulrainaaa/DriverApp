@@ -124,7 +124,7 @@ public class PermissionCheck {
      * @desc Method to start setting activity UI to enable specific permission.
      * @param context Context of the currently calling Activity UI.
      */
-    public void startInstalledAppDetailsActivity(Activity context)
+    public static void startInstalledAppDetailsActivity(Activity context)
     {
         if (context == null)
         {

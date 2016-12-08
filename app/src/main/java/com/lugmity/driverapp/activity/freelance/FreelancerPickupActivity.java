@@ -18,6 +18,7 @@ import com.lugmity.driverapp.model.Order;
 import com.lugmity.driverapp.model.Restaurant;
 import com.lugmity.driverapp.network.HTTPTask;
 import com.lugmity.driverapp.network.Network;
+import com.lugmity.driverapp.utils.ActivityUtils;
 import com.lugmity.driverapp.utils.AlertDialogUtil;
 
 import org.json.JSONException;
@@ -64,26 +65,38 @@ public class FreelancerPickupActivity extends AppCompatActivity implements View.
         btnConfirm = (Button) findViewById(R.id.btn_confirm);
         btnConfirm.setText("Confirm Pickup");
         btnConfirm.setOnClickListener(this);
+        cMobile.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
 
-        Snackbar.make(view, "Picking order from Restaurant ?", Snackbar.LENGTH_LONG).setAction("Confirm", new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    JSONObject json = new JSONObject();
-                    json.put("from", restaurant.google.trim());
-                    json.put("to", order.google.trim());
-                    HTTPTask httpTask = new HTTPTask();
-                    httpTask.setData(FreelancerPickupActivity.this, FreelancerPickupActivity.this, "POST", Network.URL_PRICING_GEO, json.toString(), 1);
-                    httpTask.execute("");
-                } catch (JSONException jsonE) {
-                    Toast.makeText(FreelancerPickupActivity.this, "Exception while packing JSON Request", Toast.LENGTH_SHORT).show();
+        switch (view.getId()) {
+            case R.id.cust_mobile:
+                if (Constants.order.mobile.trim() == null) {
+                    return;
                 }
-            }
-        }).show();
+                ActivityUtils.startDialer(this, Constants.order.mobile.trim());
+                break;
+
+            default:
+                Snackbar.make(view, "Picking order from Restaurant ?", Snackbar.LENGTH_LONG).setAction("Confirm", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        try {
+                            JSONObject json = new JSONObject();
+                            json.put("from", restaurant.google.trim());
+                            json.put("to", order.google.trim());
+                            HTTPTask httpTask = new HTTPTask();
+                            httpTask.setData(FreelancerPickupActivity.this, FreelancerPickupActivity.this, "POST", Network.URL_PRICING_GEO, json.toString(), 1);
+                            httpTask.execute("");
+                        } catch (JSONException jsonE) {
+                            Toast.makeText(FreelancerPickupActivity.this, "Exception while packing JSON Request", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }).show();
+                break;
+        }
     }
 
     @Override

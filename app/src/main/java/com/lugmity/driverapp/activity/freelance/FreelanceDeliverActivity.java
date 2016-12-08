@@ -18,6 +18,7 @@ import com.lugmity.driverapp.model.Order;
 import com.lugmity.driverapp.model.Restaurant;
 import com.lugmity.driverapp.network.HTTPTask;
 import com.lugmity.driverapp.network.Network;
+import com.lugmity.driverapp.utils.ActivityUtils;
 import com.lugmity.driverapp.utils.AlertDialogUtil;
 
 import org.json.JSONException;
@@ -64,6 +65,7 @@ public class FreelanceDeliverActivity extends AppCompatActivity implements View.
         btnConfirm = (Button) findViewById(R.id.btn_confirm);
         btnConfirm.setText(getResources().getString(R.string.confirm_delivery));
         btnConfirm.setOnClickListener(this);
+        cMobile.setOnClickListener(this);
     }
 
     @Override
@@ -81,26 +83,40 @@ public class FreelanceDeliverActivity extends AppCompatActivity implements View.
 
     @Override
     public void onClick(View view) {
-        Snackbar.make(view, getResources().getString(R.string.parcel_delivered_q), Snackbar.LENGTH_LONG).setAction(getResources().getString(R.string.confirm), new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    JSONObject json = new JSONObject();
-                    json.put("order_status", "");
-                    json.put("payment_status", "");
-                    json.put("is_delivered", "Delivered");
-                    json.put("token-key", Network.API_KEY);
-                    HTTPTask httpTask = new HTTPTask();
-                    String url = "" + Network.LURL_ORDER_EDIT + "" + order.orderId + "?" + Network.L_TOKEN_KEY;
-                    //Toast.makeText(FreelanceDeliverActivity.this, "" + url.trim(), Toast.LENGTH_SHORT).show();
-                    httpTask.setData(FreelanceDeliverActivity.this, FreelanceDeliverActivity.this, "POST", url, json.toString(), 1);
-                    httpTask.execute("");
-                } catch (JSONException jsonE) {
-                    jsonE.printStackTrace();
-                    Toast.makeText(FreelanceDeliverActivity.this, "" + jsonE.getMessage(), Toast.LENGTH_SHORT).show();
+
+
+        switch (view.getId()) {
+            case R.id.cust_mobile:
+                if (Constants.order.mobile.trim() == null) {
+                    return;
                 }
-            }
-        }).show();
+                ActivityUtils.startDialer(this, Constants.order.mobile.trim());
+                break;
+
+            default:
+
+                Snackbar.make(view, getResources().getString(R.string.parcel_delivered_q), Snackbar.LENGTH_LONG).setAction(getResources().getString(R.string.confirm), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        try {
+                            JSONObject json = new JSONObject();
+                            json.put("order_status", "");
+                            json.put("payment_status", "");
+                            json.put("is_delivered", "Delivered");
+                            json.put("token-key", Network.API_KEY);
+                            HTTPTask httpTask = new HTTPTask();
+                            String url = "" + Network.LURL_ORDER_EDIT + "" + order.orderId + "?" + Network.L_TOKEN_KEY;
+                            //Toast.makeText(FreelanceDeliverActivity.this, "" + url.trim(), Toast.LENGTH_SHORT).show();
+                            httpTask.setData(FreelanceDeliverActivity.this, FreelanceDeliverActivity.this, "POST", url, json.toString(), 1);
+                            httpTask.execute("");
+                        } catch (JSONException jsonE) {
+                            jsonE.printStackTrace();
+                            Toast.makeText(FreelanceDeliverActivity.this, "" + jsonE.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }).show();
+                break;
+        }
     }
 
     @Override

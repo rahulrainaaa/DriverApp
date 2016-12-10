@@ -139,8 +139,8 @@ public class FreelancerPickupActivity extends AppCompatActivity implements View.
                     order.price = price;
                     jsonRequest.put("orderid", order.orderId);
                     jsonRequest.put("distance", distance);
-                    jsonRequest.put("price", price);
-                    jsonRequest.put("currency", currency);
+                    jsonRequest.put("price", "");
+                    jsonRequest.put("currency", "");
                     jsonRequest.put("points", points);
                     jsonRequest.put("status", "picked");
                     jsonRequest.put("loginid", Constants.LOGIN_ID);

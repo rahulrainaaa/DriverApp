@@ -98,10 +98,10 @@ public class SponsoredTakeOrderActivity extends AppCompatActivity implements Vie
                         Order order = Constants.order;
                         JSONObject json = new JSONObject();
                         json.put("orderid", order.orderId);
-                        json.put("distance", "0");
-                        json.put("price", "0");
-                        json.put("currency", "SA");
-                        json.put("points", "0");
+                        json.put("distance", "");
+                        json.put("price", "");
+                        json.put("currency", "");
+                        json.put("points", "");
                         json.put("status", "Pending");
                         json.put("loginid", Constants.LOGIN_ID);
                         HTTPTask httpTask = new HTTPTask();

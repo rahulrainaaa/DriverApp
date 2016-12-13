@@ -106,6 +106,7 @@ public class FreelanceHistoryActivity extends FragmentActivity implements HTTPCa
                 Toast.makeText(getApplicationContext(), getResources().getString(R.string.unknown_response_status), Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e) {
+            e.printStackTrace();
             Toast.makeText(getApplicationContext(), "Exception: Some internal error occurred.", Toast.LENGTH_SHORT).show();
         }
     }

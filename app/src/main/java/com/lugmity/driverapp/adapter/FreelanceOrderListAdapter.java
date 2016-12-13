@@ -30,7 +30,7 @@ public class FreelanceOrderListAdapter extends ArrayAdapter<Order> {
         public TextView txtAddress;
         public TextView txtEmail;
         public TextView txtMobile;
-
+        public TextView txtPickup;
     }
 
     public FreelanceOrderListAdapter(Activity activity, ArrayList<Order> list) {
@@ -50,6 +50,7 @@ public class FreelanceOrderListAdapter extends ArrayAdapter<Order> {
         TextView txtAddress = null;
         TextView txtEmail = null;
         TextView txtMobile = null;
+        TextView txtPickup = null;
 
         View view = convertView;
         if (view == null) {
@@ -60,6 +61,7 @@ public class FreelanceOrderListAdapter extends ArrayAdapter<Order> {
             viewHolder.txtEmail = (TextView) view.findViewById(R.id.txt_order_email);
             viewHolder.txtMobile = (TextView) view.findViewById(R.id.txt_order_phone);
             viewHolder.txtName = (TextView) view.findViewById(R.id.txt_name);
+            viewHolder.txtPickup = (TextView) view.findViewById(R.id.txt_order_pickup);
             view.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) view.getTag();
@@ -70,6 +72,7 @@ public class FreelanceOrderListAdapter extends ArrayAdapter<Order> {
         txtAddress = viewHolder.txtAddress;
         txtEmail = viewHolder.txtEmail;
         txtMobile = viewHolder.txtMobile;
+        txtPickup = viewHolder.txtPickup;
 
         Order order = list.get(position);
         txtOrderNumber.setText("Order No: " + order.orderId);
@@ -77,6 +80,7 @@ public class FreelanceOrderListAdapter extends ArrayAdapter<Order> {
         txtAddress.setText("" + order.address);
         txtEmail.setText("" + order.email);
         txtMobile.setText("" + order.mobile);
+        txtPickup.setText("" + order.pickupTime);
 
 //        Linkify.addLinks(txtEmail, Linkify.EMAIL_ADDRESSES | Linkify.MAP_ADDRESSES);
 //        Linkify.addLinks(txtMobile, Linkify.PHONE_NUMBERS);

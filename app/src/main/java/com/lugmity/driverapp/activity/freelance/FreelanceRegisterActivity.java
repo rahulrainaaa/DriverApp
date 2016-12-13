@@ -266,7 +266,7 @@ public class FreelanceRegisterActivity extends AppCompatActivity implements View
         } else if (!Constants.patternMobile.matcher("" + strMobile).matches()) {
             flgValid = 7;
             etMobile.setError(getResources().getString(R.string.enter_valid_data));
-        } else if (strMobile.length() != 10) {
+        } else if (strMobile.length() != 11) {
             flgValid = 7;
             etMobile.setError(getResources().getString(R.string.minimum_ten));
         }

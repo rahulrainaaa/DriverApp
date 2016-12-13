@@ -167,7 +167,7 @@
     <string name="contact_admin">أيضا، اتصل صاحب مطعم لهذا النظام</string>
     <string name="no_rest_fnd">لم يتم العثور على مطعم</string>
     <string name="image_decode_exception">صورة فك استثناء</string>
-    <string name="minimum_ten">عدد عشرة أرقام</string>
+    <string name="minimum_ten">عدد 11 أرقام</string>
     <string name="tnc">أحكام وشروط</string>
     <string name="pickup_time">اختار المعاد</string>
 </resources>

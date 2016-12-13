@@ -67,7 +67,32 @@
         android:background="#222222"
         android:orientation="horizontal"
         android:gravity="center"
-        android:paddingTop="5dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pickup_time"
+            android:textColor="#939393" />
+
+        <TextView
+            android:id="@+id/txt_order_pickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09:00 PM"
+            android:padding="5dp"
+            android:textColor="#939393" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#222222"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="3dp"
         android:paddingBottom="2dp">
 
         <TextView

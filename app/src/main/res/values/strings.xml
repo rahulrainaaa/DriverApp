@@ -160,7 +160,7 @@
     <string name="parcel_delivered_q">Parcel Delivered ?</string>
     <string name="unable_to_fetch_image">Unable to fetch image</string>
     <string name="are_you_sure_q">Are you sure ?</string>
-    <string name="pickup_time">Pickup Time</string>
+    <string name="pickup_time">Pickup Time:</string>
     <string name="already_assigned">Already assigned. Pick another order.</string>
     <string name="order_successfully_assigned_to_you">This order is assigned to you successfully.</string>
     <string name="image_file_kb">Image file should not exceed 1MB</string>
@@ -168,7 +168,7 @@
     <string name="pick_from_date">Pick, from data</string>
     <string name="pick_to_date">Pick, to date</string>
     <string name="contact_admin">Also, contact Restaurant Owner for this order</string>
-    <string name="minimum_ten">10 digit number</string>
+    <string name="minimum_ten">11 digit number</string>
 
 
 </resources>

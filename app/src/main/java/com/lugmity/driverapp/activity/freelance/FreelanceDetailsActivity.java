@@ -39,7 +39,7 @@ public class FreelanceDetailsActivity extends AppCompatActivity implements HTTPC
         txtDob = (TextView) findViewById(R.id.my_details_dob);
         img = (ImageView) findViewById(R.id.img_icard);
 
-        txtName.setText(Constants.freelanceUserData.respFName);
+        txtName.setText(Constants.freelanceUserData.respUserName);
         txtAddress.setText(Constants.freelanceUserData.respFAddress);
         txtGender.setText(Constants.freelanceUserData.respFGender);
         txtMobile.setText(Constants.freelanceUserData.respCountryCode + "" + Constants.freelanceUserData.respFMobile);

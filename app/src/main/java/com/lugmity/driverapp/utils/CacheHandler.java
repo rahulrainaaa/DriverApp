@@ -110,8 +110,8 @@ public class CacheHandler {
         Constants.freelanceUserData.respFId = s.getString("respFId", Constants.freelanceUserData.respFId);
         Constants.freelanceUserData.respFName = s.getString("respFName", Constants.freelanceUserData.respFName);
         Constants.freelanceUserData.respFGender = s.getString("respFGender", Constants.freelanceUserData.respFGender);
-        Constants.freelanceUserData.respFGender = s.getString("respFMobile", Constants.freelanceUserData.respFMobile);
-        Constants.freelanceUserData.respFMobile = s.getString("respFEmail", Constants.freelanceUserData.respFEmail);
+        Constants.freelanceUserData.respFMobile = s.getString("respFMobile", Constants.freelanceUserData.respFMobile);
+        Constants.freelanceUserData.respFEmail = s.getString("respFEmail", Constants.freelanceUserData.respFEmail);
         Constants.freelanceUserData.respFAddress = s.getString("respFAddress", Constants.freelanceUserData.respFAddress);
         Constants.freelanceUserData.respFIdNo = s.getString("respFIdNo", Constants.freelanceUserData.respFIdNo);
         Constants.freelanceUserData.respFDob = s.getString("respFDob", Constants.freelanceUserData.respFDob);

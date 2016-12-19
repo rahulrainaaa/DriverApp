@@ -6,7 +6,7 @@ package com.lugmity.driverapp.network;
 public class Network {
     /**
      drivers.lugmety.com
-     lugmety.drushtiindia.com
+     lugmety.com
      */
 
     //--------------Drushti Provided URL(s)-----------------------------------------------

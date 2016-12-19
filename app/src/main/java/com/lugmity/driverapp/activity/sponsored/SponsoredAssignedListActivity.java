@@ -41,7 +41,7 @@ public class SponsoredAssignedListActivity extends AppCompatActivity implements 
     private TextView txtName;
     private FreelanceOrderListAdapter adapter;
     private ArrayList<Order> list = new ArrayList<>();      //List of all orders
-    private Order order = null;                             //Selected Order from list
+    private Order order = null;                             //Selected Order from list.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

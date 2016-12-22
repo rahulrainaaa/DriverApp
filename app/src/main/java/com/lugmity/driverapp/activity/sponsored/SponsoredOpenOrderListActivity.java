@@ -102,6 +102,15 @@ public class SponsoredOpenOrderListActivity extends AppCompatActivity implements
                     order.google = jsonOrder.getString("geo");
                     order.name = jsonOrder.getString("custname");
                     order.address = jsonOrder.getString("address");
+                    order.pickupTime = jsonOrder.getString("pickup_time");
+                    if(order.pickupTime == null)
+                    {
+                        order.pickupTime = "--";
+                    }
+                    else if(order.pickupTime == "null")
+                    {
+                        order.pickupTime = "--";
+                    }
 
                     list.add(order);
                 }

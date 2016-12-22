@@ -65,10 +65,9 @@ public class FreelanceOrderAcceptActivity extends AppCompatActivity implements V
         btnConfirm.setOnClickListener(this);
         cMobile.setOnClickListener(this);
 
-        if (order.pickupTime != null) {
+        if (order.pickupTime != null && !order.pickupTime.isEmpty()) {
             AlertDialogUtil.showAlertDialog(this, getResources().getString(R.string.pickup_time), order.pickupTime);
         }
-
     }
 
     @Override

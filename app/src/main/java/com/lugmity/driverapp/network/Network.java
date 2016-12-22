@@ -54,14 +54,14 @@ public class Network {
     public static String API_KEY = "32b11996bbdbd2dad406e851cb92f5db";
 
     //GET-webService-URL
-    public static String LURL_GET_ALL_REST = "http://lugmety.com/dev/public/api/restaurants";
-    public static String LURL_GET_REST_GEO = "http://lugmety.com/dev/public/api/restaurants/search-via-gps?radius=50&coordinates=";
-    public static String LURL_GET_PENDING_ORDERS = "http://lugmety.com/dev/public/api/orders?token-key=32b11996bbdbd2dad406e851cb92f5db&order-status=pending&ResID=";
-    public static String LURL_GET_ACCEPTED_ORDERS = "http://lugmety.com/dev/public/api/orders?token-key=32b11996bbdbd2dad406e851cb92f5db&order-status=accepted&ResID=";
+    public static String LURL_GET_ALL_REST = "http://lugmety.com/api/restaurants";
+    public static String LURL_GET_REST_GEO = "http://lugmety.com/api/restaurants/search-via-gps?radius=50&coordinates=";
+    public static String LURL_GET_PENDING_ORDERS = "http://lugmety.com/orders?token-key=32b11996bbdbd2dad406e851cb92f5db&order-status=pending&ResID=";
+    public static String LURL_GET_ACCEPTED_ORDERS = "http://lugmety.com/api/orders?token-key=32b11996bbdbd2dad406e851cb92f5db&order-status=accepted&ResID=";
 
     //POST-RESTful-webService-URL
-    public static String LURL_ACCEPT_ORDER = "http://lugmety.com/dev/public/api/orders/assign/";
-    public static String LURL_ORDER_EDIT = "http://lugmety.com/dev/public/api/orders/";
-    public static String LURL_SET_COMPLETED = "http://lugmety.com/dev/public/api/orders/delivered?token-key=32b11996bbdbd2dad406e851cb92f5db";
+    public static String LURL_ACCEPT_ORDER = "http://lugmety.com/api/orders/assign/";
+    public static String LURL_ORDER_EDIT = "http://lugmety.com/api/orders/";
+    public static String LURL_SET_COMPLETED = "http://lugmety.com/api/orders/delivered?token-key=32b11996bbdbd2dad406e851cb92f5db";
 }
 

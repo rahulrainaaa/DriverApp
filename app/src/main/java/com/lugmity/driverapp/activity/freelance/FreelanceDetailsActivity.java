@@ -46,6 +46,7 @@ public class FreelanceDetailsActivity extends AppCompatActivity implements HTTPC
         txtEmail.setText(Constants.freelanceUserData.respFEmail);
         txtDob.setText(Constants.freelanceUserData.respFDob);
 
+//      Get the profile picture from web-service.
 //        try {
 //            JSONObject json = new JSONObject();
 //            json.put("fid", "" + Constants.freelanceUserData.respFId);

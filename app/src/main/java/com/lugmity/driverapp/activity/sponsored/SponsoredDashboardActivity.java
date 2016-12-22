@@ -207,7 +207,9 @@ public class SponsoredDashboardActivity extends AppCompatActivity implements Vie
                 json.put("points", "");
                 jarray.put(json);
 
-                arrIds.put(Integer.parseInt(order.orderId.trim()));
+                if(order.status.contains("delivered")){
+                    arrIds.put(Integer.parseInt(order.orderId.trim()));
+                }
             }
             jsonIds.put("order_id", arrIds);
         } catch (JSONException jsonE) {

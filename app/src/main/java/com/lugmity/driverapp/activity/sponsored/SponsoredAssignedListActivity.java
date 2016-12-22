@@ -42,7 +42,7 @@ public class SponsoredAssignedListActivity extends AppCompatActivity implements 
     private FreelanceOrderListAdapter adapter;
     private ArrayList<Order> list = new ArrayList<>();      //List of all orders
     private Order order = null;                             //Selected Order from list.
-
+    private String orderIDSelected = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,6 +102,9 @@ public class SponsoredAssignedListActivity extends AppCompatActivity implements 
                     jsonReq.put("price", "");
                     jsonReq.put("currency", "");
                     jsonReq.put("distance", "");
+
+                    orderIDSelected = order.orderId.trim();
+
                     HTTPTask httpTask = new HTTPTask();
                     httpTask.setData(SponsoredAssignedListActivity.this, SponsoredAssignedListActivity.this, "POST", Network.URL_RESPOND_TO_ORDER, jsonReq.toString(), 2);
                     httpTask.execute("");
@@ -218,7 +221,7 @@ public class SponsoredAssignedListActivity extends AppCompatActivity implements 
 
                     //Update picked up status in Lugemity's portal.
                     HTTPTask httpTask = new HTTPTask();
-                    String hitURL = "" + Network.LURL_ACCEPT_ORDER + Constants.order.orderId + "?" + Network.L_TOKEN_KEY;
+                    String hitURL = "" + Network.LURL_ACCEPT_ORDER + orderIDSelected.trim() + "?" + Network.L_TOKEN_KEY;
                     httpTask.setData(this, this, "POST", hitURL, "{}", 4);
                     httpTask.execute("");
                 } else if (apiCode == 204) {

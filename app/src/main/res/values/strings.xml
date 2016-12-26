@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DriverApp</string>
+    <string name="app_name">Lugmety Driver</string>
     <string name="user_name">User Name</string>
     <string name="password">Password</string>
     <string name="language">Language</string>

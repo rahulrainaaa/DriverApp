@@ -202,6 +202,13 @@ public class FreelanceDashbordActivity extends AppCompatActivity implements View
                 if (sCode == 204) {
                     startActivity(new Intent(this, FreelanceRestaurantListMapActivity.class));
                 }
+                if (sCode == 203) {
+                    Toast.makeText(this, getResources().getString(R.string.user_not_exist), Toast.LENGTH_SHORT).show();
+                    Constants.start = 0;
+                    startActivity(new Intent(this, LoginActivity.class));
+                    finish();
+                    return;
+                }
             }
         } catch (JSONException jsonE) {
             jsonE.printStackTrace();

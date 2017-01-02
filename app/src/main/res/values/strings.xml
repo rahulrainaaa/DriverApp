@@ -117,6 +117,7 @@
     <string name="order_rejected">Order Rejected</string>
     <string name="show">Show</string>
     <string name="alert">Alert</string>
+    <string name="user_not_exist">User Not Exist</string>
     <string name="image_decode_exception">Image Decoding Exception</string>
     <string name="no_rest_fnd">No Restaurant Found</string>
     <string name="reverse">Undelivered</string>

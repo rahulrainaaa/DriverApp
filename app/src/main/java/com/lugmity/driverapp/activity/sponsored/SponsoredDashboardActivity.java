@@ -207,7 +207,7 @@ public class SponsoredDashboardActivity extends AppCompatActivity implements Vie
                 json.put("points", "");
                 jarray.put(json);
 
-                if(order.status.contains("delivered")){
+                if (order.status.contains("delivered")) {
                     arrIds.put(Integer.parseInt(order.orderId.trim()));
                 }
             }
@@ -316,6 +316,10 @@ public class SponsoredDashboardActivity extends AppCompatActivity implements Vie
                         int sql = stmt.executeUpdateDelete();
                     }
                     Toast.makeText(this, getResources().getString(R.string.total_orders_restored) + " " + arrData.length(), Toast.LENGTH_SHORT).show();
+                } else if (apiCode == 203) {
+                    Toast.makeText(this, "" + getResources().getString(R.string.user_not_exist), Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(this, LoginActivity.class));
+                    finish();
                 } else {
                     //No Pending list in cloud DB.
                 }

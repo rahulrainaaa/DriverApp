@@ -1,174 +1,346 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="app_name">مندوب توصيل</string>
+
     <string name="user_name">اسم المستخدم</string>
-    <string name="password">كلمه السر</string>
-    <string name="language">لغة</string>
-    <string name="freelance_driver">سائق مستقلة</string>
-    <string name="sponsored_driver"> سائق برعاية</string>
-    <string name="login">تسجيل الدخول</string>
-    <string name="register">تسجيل</string>
-    <string name="as_freelancer">كما بالقطعة</string>
-    <string name="confirm_password">تأكيد كلمة المرور</string>
-    <string name="name">اسم</string>
-    <string name="gender">جنس</string>
-    <string name="mobile_number">رقم الهاتف المحمول</string>
-    <string name="email">البريد الإلكتروني</string>
-    <string name="date_of_birth">تاريخ الولادة</string>
-    <string name="address">عنوان</string>
-    <string name="id_no">رقم الهوية</string>
-    <string name="upload_id">تحميل معرف</string>
-    <string name="order">طلب</string>
-    <string name="order_history">تاريخ الطلب</string>
-    <string name="points_collected">النقاط التي تم جمعها</string>
-    <string name="my_details">تفاصيلي</string>
-    <string name="home">الرئيسية</string>
-    <string name="change_password">تغيير كلمة السر</string>
-    <string name="logout">خروج</string>
-    <string name="restaurent">مطعم</string>
-    <string name="restaurant_details">تفاصيل المطعم</string>
-    <string name="customer_details">تفاصيل العميل</string>
-    <string name="order_received_from_resturant">أمر وردت من مطعم</string>
-    <string name="trip_details">تفاصيل الرحلة</string>
-    <string name="order_no">رقم الأمر</string>
-    <string name="distance_travelled">المسافة المقطوعة</string>
-    <string name="trip_earning">رحلة الكسب</string>
-    <string name="trip_history">التاريخ رحلة</string>
-    <string name="get_history">الحصول على التاريخ</string>
-    <string name="points">نقاط</string>
-    <string name="old_password">كلمة المرور القديمة</string>
-    <string name="new_password">كلمة السر الجديدة</string>
-    <string name="status">الحالة</string>
-    <string name="confirm">أكد</string>
-    <string name="save">حفظ</string>
-    <string name="restaurant_name">اسم المطعم</string>
-    <string name="distance">المسافات</string>
-    <string name="duration">مدة</string>
-    <string name="loading">جار التحميل</string>
-    <string name="drivers_app">التطبيقات السائق</string>
-    <string name="get_details">الحصول على تفاصيل</string>
-    <string name="app_name">سائق التطبيقات</string>
-    <string name="freelance_dashboard">لوحة لحسابهم الخاص</string>
-    <string name="order_detail">ترتيب التفاصيل</string>
-    <string name="freelance_history">التاريخ مستقلة</string>
-    <string name="sponsored_history">تاريخ برعاية</string>
-    <string name="order_list">قائمة ترتيب</string>
-    <string name="title_activity_restaurant_map">خريطة المطعم</string>
-    <string name="english">الإنجليزية</string>
-    <string name="arabic">العربية</string>
-    <string name="changing_language">غير اللغة</string>
-    <string name="cannot_be_empty">لايمكن ان يكون فارغا</string>
-    <string name="connecting">توصيل...</string>
-    <string name="alphabets_and_nubers_allowed_only">الحروف الأبجدية و الأرقام المسموح بها فقط</string>
-    <string name="enter_valid_data">إدخال بيانات صالحة</string>
-    <string name="only_numbers_allowed">أرقام فقط سمحت</string>
-    <string name="confirm_password_not_matching">تأكيد كلمة المرور غير مطابقة</string>
-    <string name="id_proof_image_required">معرف صورة الإثبات المطلوب</string>
-    <string name="title_activity_restaurant_list_map">رسم خريطة</string>
-    <string name="action_settings">إعدادات</string>
-    <string name="title_activity_freelance_order_history_detail">لحسابهم الخاص بالدفع التاريخ التفاصيل</string>
-    <string name="title_activity_freelance_nav2_customer">رسم خريطة</string>
-    <string name="title_activity_freelance_nav2_restaurant">رسم خريطة</string>
-    <string name="sync">تزامن</string>
-    <string name="new_orders">طلبات جديدة</string>
-    <string name="pick">تأكيد بيك أب</string>
-    <string name="map">رسم خريطة</string>
-    <string name="pick_order">إختر الترتيب</string>
-    <string name="full_route">الطريق الكامل</string>
-    <string name="confirm_delivery">تأكيد التوصيل</string>
-    <string name="customer">زبون</string>
-    <string name="customer_map">خريطة العملاء</string>
-    <string name="order_deliver">أجل تسليم</string>
-    <string name="order_pickup">أجل لاقط</string>
-    <string name="orders_assigned">أوامر المخصصة</string>
-    <string name="orders_delivered">أوامر سلمت</string>
-    <string name="orders_pending">الأوامر المعلقة</string>
-    <string name="orders_reversed">أوامر عكس</string>
-    <string name="title_activity_show_coordinate_map">رسم خريطة</string>
-    <string name="accept_q">قبول ؟</string>
-    <string name="add_q">إضافة؟</string>
-    <string name="alert">إنذار</string>
-    <string name="already_assigned">تعيين بالفعل. اختيار أمر آخر.</string>
-    <string name="already_login_as_freelance_driver">تسجيل الدخول إذا كنت كسائق لحسابهم الخاص</string>
-    <string name="already_login_as_sponsored_driver">تسجيل الدخول إذا كنت كسائق برعاية</string>
-    <string name="are_you_sure_q">هل أنت واثق ؟</string>
-    <string name="bad_request">اقتراح غير جيد</string>
-    <string name="cancel">إلغاء</string>
-    <string name="current">تيار</string>
-    <string name="customer_delivery">تسليم العملاء</string>
-    <string name="delivered">تم التوصيل</string>
-    <string name="destination">المكان المقصود</string>
-    <string name="empty_list">قائمة فارغة</string>
-    <string name="empty_order_list">"فارغة قائمة ترتيب. "</string>
-    <string name="error">خطأ</string>
-    <string name="failed">فشل</string>
-    <string name="fetching_location">جلب الموقع</string>
-    <string name="fetching_route">جلب الطريق</string>
-    <string name="image_attached">الصورة المرفقة</string>
-    <string name="image_file_kb">يجب أن لا يتجاوز ملف الصورة 1MB</string>
-    <string name="invalid_credentials">بيانات الاعتماد غير صالحة</string>
-    <string name="no_assigned_order">لم يكن هناك تعيين النظام.</string>
-    <string name="no_order_to_reject">لا لرفض.</string>
-    <string name="no_orders_found">لا توجد أوامر.</string>
-    <string name="no_route">لا الطريق</string>
-    <string name="no_route_to_restaurant">ليس هناك طريق إلى مطعم</string>
-    <string name="nothing_to_sync">لا شيء لمزامنة.</string>
-    <string name="ok">حسنا</string>
-    <string name="order_picked_from_restaurant">منقار أمر من مطعم</string>
-    <string name="order_rejected">تم رفض الطلب</string>
-    <string name="order_successfully_assigned_to_you">يتم تعيين هذا الأمر لكم بنجاح.</string>
-    <string name="order_updated">أجل التحديث</string>
-    <string name="origin">الأصل</string>
-    <string name="parcel_delivered_q">تسليم الطرود؟</string>
-    <string name="password_changed_successfully">تم تغيير الرقم السري بنجاح</string>
-    <string name="wait">انتظر</string>
+
+    <string name="password">كلمة المرور</string>
+
+    <string name="language">اللغة</string>
+
+    <string name="current">الحالي</string>
+
+    <string name="destination">الموقع</string>
+
+    <string name="origin">موقع الاساسي</string>
+
+    <string name="accept">اقبل</string>
+
+    <string name="cancel">الغاء</string>
+
+    <string name="no_route">لا يوجد طريق</string>
+
+    <string name="no_route_to_restaurant">لا يوجد طريق للمطعم</string>
+
+    <string name="freelance_driver">مندوب مستقل</string>
+
+    <string name="sponsored_driver">مندوب تابع للمطعم</string>
+
+    <string name="show_orders">اظهر الطلبات</string>
+
+    <string name="ok">نعم</string>
+
+    <string name="login">تسجيل دخول</string>
+
+    <string name="register">انشاء حساب</string>
+
+    <string name="tnc">الشروط و الاحكام</string>
+
+    <string name="invalid_credentials">بيانات غير صحيحة</string>
+
     <string name="user_inactive">المستخدم غير فعال</string>
-    <string name="update_the_new_order_status">تحديث حالة النظام الجديد</string>
-    <string name="unknown_response_status">غير محدد الحالة الاستجابة</string>
-    <string name="unauthorized_request">طلب غير المصرح به</string>
-    <string name="unable_toaccept_order">غير قادر على قبول النظام.</string>
-    <string name="unable_to_find_route">تعذر العثور الطريق</string>
-    <string name="unable_to_fetch_image">غير قادر على جلب صورة</string>
-    <string name="pick_from_date">اختيار من البيانات</string>
-    <string name="pick_to_date">اختيار حتى الآن</string>
-    <string name="prompt">موجه</string>
-    <string name="reject">رفض</string>
-    <string name="respond">رد</string>
-    <string name="respond_for_order">يرجى الرد على هذا من أجل إنجاز.</string>
-    <string name="response">استجابة</string>
-    <string name="restaurant">مطعم</string>
-    <string name="reverse">غير المسلمة</string>
-    <string name="routing_cancelled">التوجيه ألغي</string>
-    <string name="routing_failed">فشل التوجيه</string>
-    <string name="see_on_map_q">اطلع على الخريطة؟</string>
-    <string name="show">تبين</string>
-    <string name="show_map_q">تظهر الخريطة؟</string>
-    <string name="show_on_map_q">تظهر على الخريطة؟</string>
-    <string name="show_orders">مشاهدة الطلبات</string>
-    <string name="sync_in_progress">مزامنة في التقدم ...</string>
-    <string name="sync_process_completed_successfully">أكملت عملية المزامنة بنجاح</string>
-    <string name="this_order_is_delivered">يتم تسليم هذا النظام</string>
-    <string name="this_order_is_reveresed">لم يتم تسليم هذا النظام</string>
-    <string name="total_orders_restored">إجمالي الطلبات استعادة</string>
-    <string name="enter_valid_password">إدخال كلمة السر الصحيحة</string>
-    <string name="sync_failed">فشلت المزامنة</string>
-    <string name="no_pending_orders">لا قيد الطلب. افحصها.</string>
-    <string name="order_is_already_pending_for_you">أمر معلقة بالفعل بالنسبة لك.</string>
-    <string name="order_is_already_for_delivery">يرجى تسليم الطرود الحالي إلى العميل في المقام الأول.</string>
-    <string name="accept">قبول</string>
-    <string name="assigned_orders">طلبات معينة</string>
-    <string name="delivered_on_p">تم التسليم:</string>
-    <string name="delivered_orders">أوامر تسليمها</string>
-    <string name="from_date">من البيانات:</string>
-    <string name="pending_orders">طلبات معلقة</string>
-    <string name="reverse_orders">أمر غير المسلمة</string>
-    <string name="to_date">ان يذهب في موعد:</string>
-    <string name="orders_delivered_success">أوامر تسليم بنجاح</string>
-    <string name="contact_owner">يرجى الاتصال مالك مطعم.</string>
-    <string name="contact_admin">أيضا، اتصل صاحب مطعم لهذا النظام</string>
-    <string name="no_rest_fnd">لم يتم العثور على مطعم</string>
-    <string name="image_decode_exception">صورة فك استثناء</string>
-    <string name="minimum_ten">عدد 11 أرقام</string>
-    <string name="tnc">أحكام وشروط</string>
-    <string name="pickup_time">اختار المعاد</string>
-    <string name="user_not_exist">المستخدم غير متوفر</string>
+
+    <string name="as_freelancer">مندوب مستقل</string>
+
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+
+    <string name="customer_delivery">توصيل للعميل</string>
+
+    <string name="name">أسم</string>
+
+    <string name="gender">الجنس</string>
+
+    <string name="mobile_number">رقم الجوال</string>
+
+    <string name="email">البريد الالكتروني</string>
+
+    <string name="date_of_birth">تاريخ الميلاد</string>
+
+    <string name="address">العنوان/الحي</string>
+
+    <string name="id_no">رقم الهوية/الاقامة</string>
+
+    <string name="upload_id">حمل صورة البطاقة الشخصية</string>
+
+    <string name="order">الطلب</string>
+
+    <string name="add_q">أضف</string>
+
+    <string name="order_history">الطلبات السابقة</string>
+
+    <string name="points_collected">مجموع النقاط</string>
+
+    <string name="my_details">بياناتي الشخصية</string>
+
+    <string name="home">الصفحة الرئيسية</string>
+
+    <string name="sync">اقتران</string>
+
+    <string name="sync_failed">فشل في الاقتران</string>
+
+    <string name="change_password">تغيير كلمة المرور</string>
+
+    <string name="logout">الخروج</string>
+
+    <string name="restaurent">المطعم</string>
+
+    <string name="restaurant_details">بيانات المطعم</string>
+
+    <string name="customer_details">بيانات العميل</string>
+
+    <string name="order_received_from_resturant">استلمت الطلب من المطعم</string>
+
+    <string name="trip_details">تفاصيل التوصيل</string>
+
+    <string name="new_orders">طلبات جديدة</string>
+
+    <string name="assigned_orders">الطلبات المخصصة </string>
+
+    <string name="delivered_orders">الطلبات الموصلة</string>
+
+    <string name="pending_orders">الطلبات المعلقة</string>
+
+    <string name="reverse_orders">طلبات لم توصل</string>
+
+    <string name="order_no">رقم الطلب</string>
+
+    <string name="customer_map">موقع العميل</string>
+
+    <string name="order_pickup">اخذ الطلب</string>
+
+    <string name="order_deliver">توصيل الطلب</string>
+
+    <string name="distance_travelled">المسافة المقطوعة</string>
+
+    <string name="trip_earning">المستحقات</string>
+
+    <string name="trip_history">تفاصيل التوصيل</string>
+
+    <string name="from_date">بيانات من</string>
+
+    <string name="to_date">بيانات الي</string>
+
+    <string name="get_history">جلب الطلبات السابقة</string>
+
+    <string name="points">النقاط</string>
+
+    <string name="old_password">كلمة المرور القديمة</string>
+
+    <string name="new_password">كلمة المرور الجديدة</string>
+
+    <string name="status">الحالة</string>
+
+    <string name="title_activity_restaurant_map">موقع المطعم</string>
+
+    <string name="full_route">الطريق بالكامل</string>
+
+    <string name="confirm">تاكيد</string>
+
+    <string name="confirm_delivery">تاكيد وصول الطلب</string>
+
+    <string name="pick">تاكيد استلام الطلب من المطعم</string>
+
+    <string name="pick_order">اختر طلب</string>
+
+    <string name="customer">العميل</string>
+
+    <string name="orders_assigned">الطلبات المعينة</string>
+
+    <string name="contact_owner">فضلا تواصل مع المطعم</string>
+
+    <string name="orders_pending">الطلبات المعلقة</string>
+
+    <string name="map">الخريطة</string>
+
+    <string name="orders_delivered">الطلبات التي تم توصيلها</string>
+
+    <string name="orders_delivered_success">الطلبات التي تم توصيلها بنجاح</string>
+
+    <string name="save">حفظ</string>
+
+    <string name="restaurant_name">اسم المطعم</string>
+
+    <string name="distance">المسافة</string>
+
+    <string name="duration">الوقت </string>
+
+    <string name="loading">يتم التحميل</string>
+
+    <string name="wait">انتظر</string>
+
+    <string name="reject">غير موافق</string>
+
+    <string name="orders_reversed">الطلبات الملغية</string>
+
+    <string name="drivers_app">تطبيق مندوب التوصيل</string>
+
+    <string name="get_details">جلب التفاصيل</string>
+
+    <string name="freelance_dashboard">الصفحة الرئيسية</string>
+
+    <string name="order_detail">تفاصيل الطلب</string>
+
+    <string name="freelance_history">لأحة الطلبات السابقة- مندوب مستقل</string>
+
+    <string name="sponsored_history">لأحة الطلبات السابقة-مندوب تابع</string>
+
+    <string name="order_list">قائمة الطلبات</string>
+
+    <string name="restaurant">المطعم</string>
+
+    <string name="english">الانجليزية</string>
+
+    <string name="arabic">العربية</string>
+
+    <string name="unable_to_find_route">لم يتم ايجاد الطريقة</string>
+
+    <string name="routing_cancelled">الغي البحث عن الطريق</string>
+
+    <string name="show_map_q">اظهر الخريطة</string>
+
+    <string name="routing_failed">الغي البحث عن الطريق</string>
+
+    <string name="fetching_location">احضار الموقع</string>
+
+    <string name="fetching_route">احضار الطريق</string>
+
+    <string name="unknown_response_status">لم يتم التعرف</string>
+
+    <string name="unauthorized_request">طلب غير مصرح به</string>
+
+    <string name="changing_language">تغيير اللغة</string>
+
+    <string name="cannot_be_empty">فضلا املأ الخانة</string>
+
+    <string name="connecting">يتصل</string>
+
+    <string name="respond_for_order">فضلا اختر للقبول او العودة للرفض</string>
+
+    <string name="empty_list">القائمة فارغة</string>
+
+    <string name="failed">فشل</string>
+
+    <string name="prompt">دفع</string>
+
+    <string name="error">يوجد خطاء</string>
+
+    <string name="order_is_already_pending_for_you">يوجد لديك طلب معلق</string>
+
+    <string name="order_is_already_for_delivery">فضلا وصل طلبك الحالي للعميل أولا</string>
+
+    <string name="no_pending_orders">لا يوجد طلبات معلقةز راجع الطلباتز</string>
+
+    <string name="order_rejected">رفض الطلب</string>
+
+    <string name="show">اظهار</string>
+
+    <string name="alert">تنبيه</string>
+
+    <string name="user_not_exist">لم يتم العثور على المستخدم</string>
+
+    <string name="image_decode_exception">لم يتم تحميل الصورة</string>
+
+    <string name="no_rest_fnd">لم يتم العثور على المطعم</string>
+
+    <string name="reverse">لم يتم التوصيل</string>
+
+    <string name="delivered">تم التوصيل</string>
+
+    <string name="delivered_on_p">تم التوصيل في:</string>
+
+    <string name="see_on_map_q">اظهار الموقع على الخريطة</string>
+
+    <string name="order_updated">تحديث الطلب</string>
+
+    <string name="sync_in_progress">جاري الاقتران</string>
+
+    <string name="nothing_to_sync">لا يوجد معلومات للاقتران</string>
+
+    <string name="accept_q">قبول هذا الطلب؟</string>
+
+    <string name="update_the_new_order_status">تحديث الحالة للطلب </string>
+
+    <string name="respond">اجب</string>
+
+    <string name="show_on_map_q">اظهر على الخريطة</string>
+
+    <string name="image_attached">الصورة مضافة</string>
+
+    <string name="sync_process_completed_successfully">تم الاقتران بنجاح</string>
+
+    <string name="no_order_to_reject">لا يوجد طلب لرفضه</string>
+
+    <string name="this_order_is_delivered">تم توصيل الطلب</string>
+
+    <string name="this_order_is_reveresed">لم يتم توصيل الطلب</string>
+
+    <string name="response">اجابة</string>
+
+    <string name="unable_toaccept_order">غير متاح لاستلام الطلبات</string>
+
+    <string name="password_changed_successfully">تم تغيير كلمة المرور بنجاح </string>
+
+    <string name="no_assigned_order">لا يوجد لديك طلب</string>
+
+    <string name="alphabets_and_nubers_allowed_only">حروف و ارقام فقد</string>
+
+    <string name="bad_request">طلب خاطئ</string>
+
+    <string name="total_orders_restored">تم استعادة الطلبات المعلقة</string>
+
+    <string name="enter_valid_data">ادخل بياناتك الصحيحة</string>
+
+    <string name="enter_valid_password">ادخل كلمة مرور صحيحة</string>
+
+    <string name="only_numbers_allowed">ارقام فقط</string>
+
+    <string name="confirm_password_not_matching">كلمة المرور غير مطابقة</string>
+
+    <string name="id_proof_image_required">الرجاء رفع صورة من البطاقة الشخصية</string>
+
+    <string name="title_activity_restaurant_list_map">الخريطة</string>
+
+    <string name="title_activity_freelance_order_history_detail">تفاصيل بيانات المندوب المستقل</string>
+
+    <string name="action_settings">اعدادات</string>
+
+    <string name="title_activity_freelance_nav2_restaurant">الخريطة</string>
+
+    <string name="title_activity_freelance_nav2_customer">الخريطة</string>
+
+    <string name="title_activity_show_coordinate_map">الخريطة</string>
+
+    <string name="empty_order_list">قائمة الطلبات فارغة</string>
+
+    <string name="no_orders_found">هذا الحساب مفعل حاليا</string>
+
+    <string name="already_login_as_freelance_driver">هذا الحساب مفعل حاليا</string>
+
+    <string name="already_login_as_sponsored_driver">لا يمكن الدخول لهذا الحساب لوجود مستخدم لهذا الحساب</string>
+
+    <string name="parcel_delivered_q">تم تسليم الطلب؟</string>
+
+    <string name="unable_to_fetch_image">لا نستطيع اظهار الصورة</string>
+
+    <string name="are_you_sure_q">هل انت متأكد؟</string>
+
+    <string name="pickup_time">موعد الاستلام:</string>
+
+    <string name="already_assigned">اختر طلب اخر- هذا الطلب جاري تنفيذه</string>
+
+    <string name="order_successfully_assigned_to_you">تم تعيين هذا الطلب لك بنجاح</string>
+
+    <string name="image_file_kb">الصورة المحملة يجب ان لا يزيد حجمها عن 1 ميجا</string>
+
+    <string name="order_picked_from_restaurant">تم استلام الطلب من المطعم</string>
+
+    <string name="pick_from_date">اختر من تاريخ</string>
+
+    <string name="pick_to_date">اختر الي تاريخ</string>
+
+    <string name="contact_admin">فضلا تواصل مع المطعم لهذا الطلب</string>
+
+    <string name="minimum_ten">فضلا ادخل 10 ارقام</string>
+
 </resources>
